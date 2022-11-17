@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2022-11-17 11:49:29.216915",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "empresa_contactada",
+  "asunto_relacionado"
+ ],
+ "fields": [
+  {
+   "fieldname": "empresa_contactada",
+   "fieldtype": "Link",
+   "label": "Empresa Contactada",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "asunto_relacionado",
+   "fieldtype": "Data",
+   "label": "Asunto relacionado"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-11-17 11:49:29.216915",
+ "modified_by": "Administrator",
+ "module": "Project Management",
+ "name": "Contactos de PMO",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

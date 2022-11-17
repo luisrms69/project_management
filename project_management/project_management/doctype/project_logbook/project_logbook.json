@@ -1,74 +1,42 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:PM-{pr_mg_id}-{###}",
  "creation": "2022-11-16 17:35:34.147968",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "project",
+  "pr_mg_id",
+  "analisis_de_factibilidad",
+  "column_break_3",
+  "pr_mg_name",
   "preinversi\u00f3n_section",
-  "alcance_del_proyecto",
-  "autorizaciones_section",
-  "estudios_de_factibilidad_tecnica_economica_section",
+  "pr_mg_alcance_del_proyecto",
   "estudios_de_factibilidad_t\u00e9cnica_section",
-  "analisis_de_mercado_hallazgos",
-  "analisis_de_mercado",
-  "an\u00e1lisis_de_tecnologias_hallazgos",
-  "an\u00e1lisis_t\u00e9cnico",
-  "an\u00e1lisis_de_riesgo",
-  "an\u00e1lisis_ambiental",
+  "pr_mgautorizaci\u00f3n_estudios_inversion",
+  "an\u00e1lisis_de_ubicaci\u00f3n",
+  "pr_mg_analisis_de_mercado",
+  "pr_mg_an\u00e1lisis_de_tecnologias",
+  "pr_mg_an\u00e1lisis_de_riesgo",
+  "column_break_10",
+  "reporte_analisis_ubicaci\u00f3n",
+  "pr_mganalisis_de_mercado_file",
+  "pr_mg_an\u00e1lisis_t\u00e9cnico_file",
+  "pr_mg_reporte_analisis_riesgo",
   "resultados_financieros_section",
-  "an\u00e1lisis_financiero",
-  "proyecto"
+  "pr_mg_analisis_financiero",
+  "analisis_de_sensibilidad",
+  "contactos_realizados_durante_el_proceso_section",
+  "contactos"
  ],
  "fields": [
-  {
-   "fieldname": "project",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Project",
-   "options": "Project",
-   "reqd": 1
-  },
-  {
-   "description": "Se tiene que definir lo mas claramente posible el alcance que tiene el proyecto.  Se deben incluir la mayor cantidad de posible de informaci\u00f3n referente al mercado, tecnolog\u00eda, riesgos, etc.",
-   "fieldname": "alcance_del_proyecto",
-   "fieldtype": "Text",
-   "label": "Alcance del proyecto"
-  },
-  {
-   "fieldname": "analisis_de_mercado",
-   "fieldtype": "Attach",
-   "label": "Analisis de Mercado"
-  },
-  {
-   "fieldname": "an\u00e1lisis_t\u00e9cnico",
-   "fieldtype": "Attach",
-   "label": "An\u00e1lisis T\u00e9cnico"
-  },
-  {
-   "fieldname": "an\u00e1lisis_de_riesgo",
-   "fieldtype": "Text",
-   "label": "An\u00e1lisis de Riesgo"
-  },
-  {
-   "fieldname": "an\u00e1lisis_financiero",
-   "fieldtype": "Table",
-   "label": "An\u00e1lisis Financiero",
-   "options": "Project Financial Analysis"
-  },
-  {
-   "fieldname": "an\u00e1lisis_ambiental",
-   "fieldtype": "Text",
-   "label": "An\u00e1lisis Ambiental"
-  },
   {
    "collapsible": 1,
    "fieldname": "preinversi\u00f3n_section",
    "fieldtype": "Section Break",
-   "label": "Preinversi\u00f3n"
+   "label": "Definici\u00f3n de Alcance"
   },
   {
    "collapsible": 1,
@@ -77,46 +45,130 @@
    "label": "Factibilidad T\u00e9cnica"
   },
   {
-   "fieldname": "analisis_de_mercado_hallazgos",
-   "fieldtype": "Text",
-   "label": "Analisis de Mercado Hallazgos"
-  },
-  {
-   "fieldname": "an\u00e1lisis_de_tecnologias_hallazgos",
-   "fieldtype": "Text",
-   "label": "An\u00e1lisis de tecnologias hallazgos"
-  },
-  {
    "collapsible": 1,
    "fieldname": "resultados_financieros_section",
    "fieldtype": "Section Break",
    "label": "Factibilidad Econ\u00f3mica"
   },
   {
-   "collapsible": 1,
-   "fieldname": "estudios_de_factibilidad_tecnica_economica_section",
-   "fieldtype": "Section Break",
-   "label": "Estudios de factibilidad Tecnica Economica"
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
   },
   {
-   "collapsible": 1,
-   "fieldname": "autorizaciones_section",
-   "fieldtype": "Section Break",
-   "label": "Autorizaciones"
+   "fieldname": "pr_mg_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
   },
   {
-   "fieldname": "proyecto",
+   "fieldname": "pr_mg_name",
    "fieldtype": "Data",
-   "label": "Proyecto",
-   "read_only": 1
+   "label": "Proyecto"
+  },
+  {
+   "description": "Definir lo mas claramente posible el alcance que tiene el proyecto.  Se deben incluir la mayor cantidad de posible de informaci\u00f3n referente al mercado, tecnolog\u00eda, riesgos, ubicacion, obras a realizar, necesidades de recursos humanos, etc.",
+   "fieldname": "pr_mg_alcance_del_proyecto",
+   "fieldtype": "Text",
+   "label": "Alcance del proyecto"
+  },
+  {
+   "default": "0",
+   "description": "Analiza y eval\u00faa los mercados objetivos, la competencia, canales de distribuci\u00f3n, precios, obst\u00e1culos de entrada, etc.",
+   "fieldname": "pr_mg_analisis_de_mercado",
+   "fieldtype": "Check",
+   "label": "Analisis de Mercado"
+  },
+  {
+   "fieldname": "pr_mganalisis_de_mercado_file",
+   "fieldtype": "Attach",
+   "label": "Reporte Analisis de Mercado"
+  },
+  {
+   "default": "0",
+   "description": "Identifica las alternativas tecnol\u00f3gicas, eval\u00faa ventajas y desventajas de cada alternativa, localizaci\u00f3n de proveedores, complejidades en la instalaci\u00f3n, constructabilidad.\nAdicionalmente analiza la factibilidad operativa del proyecto, incluyendo la disponibilidad de materia prima, servicios, mano de obra, proveedores, por mencionar algunos.",
+   "fieldname": "pr_mg_an\u00e1lisis_de_tecnologias",
+   "fieldtype": "Check",
+   "label": "An\u00e1lisis Tecnico Operativo"
+  },
+  {
+   "fieldname": "pr_mg_an\u00e1lisis_t\u00e9cnico_file",
+   "fieldtype": "Attach",
+   "label": "Reporte de An\u00e1lisis de  Tecnolog\u00eda"
+  },
+  {
+   "default": "0",
+   "description": "Este reporte incluye la detecci\u00f3n de riesgos, la evaluaci\u00f3n de impactos ambientales y la revisi\u00f3n de permisos necesarios para la ejecuci\u00f3n del proyecto",
+   "fieldname": "pr_mg_an\u00e1lisis_de_riesgo",
+   "fieldtype": "Check",
+   "label": "An\u00e1lisis de Riesgo"
+  },
+  {
+   "fieldname": "pr_mg_reporte_analisis_riesgo",
+   "fieldtype": "Attach",
+   "label": "Reporte An\u00e1lisis Riesgo"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pr_mg_analisis_financiero",
+   "fieldtype": "Table",
+   "label": "An\u00e1lisis Financiero",
+   "options": "Project Financial Analysis"
+  },
+  {
+   "description": "Para los casos en que se requiera autorizaci\u00f3n se deber\u00e1 indicar el origen de la autorizaci\u00f3n.  Si no se requiere \u00fanicamente indicarlo",
+   "fieldname": "pr_mgautorizaci\u00f3n_estudios_inversion",
+   "fieldtype": "Data",
+   "label": "Autorizaci\u00f3n Estudios de Inversi\u00f3n"
+  },
+  {
+   "default": "0",
+   "description": "Verifica las necesidades de obra civil relativa al sitio(s) elegido(s), identificando necesidades de log\u00edstica, caminos, nivelaci\u00f3n, obra civil en general",
+   "fieldname": "an\u00e1lisis_de_ubicaci\u00f3n",
+   "fieldtype": "Check",
+   "label": "An\u00e1lisis de ubicaci\u00f3n"
+  },
+  {
+   "fieldname": "reporte_analisis_ubicaci\u00f3n",
+   "fieldtype": "Attach",
+   "label": "Reporte Analisis Ubicaci\u00f3n"
+  },
+  {
+   "description": "Se\u00f1alar los resultados generales obtenidos al generar escenarios de sensibilidad, particularmente enlistar las variables cr\u00edticas detectadas",
+   "fieldname": "analisis_de_sensibilidad",
+   "fieldtype": "Text",
+   "label": "Analisis de sensibilidad"
+  },
+  {
+   "fieldname": "analisis_de_factibilidad",
+   "fieldtype": "Link",
+   "label": "Reporte Analisis de Factibilidad",
+   "options": "Analisis de Factibilidad"
+  },
+  {
+   "fieldname": "contactos",
+   "fieldtype": "Table",
+   "label": "Contactos",
+   "options": "Contactos de PMO"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "contactos_realizados_durante_el_proceso_section",
+   "fieldtype": "Section Break",
+   "label": "Contactos realizados durante el proceso"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-11-17 08:47:30.161907",
+ "modified": "2022-11-17 11:53:05.156153",
  "modified_by": "Administrator",
  "module": "Project Management",
  "name": "Project Logbook",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
