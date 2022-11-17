@@ -63,9 +63,11 @@
    "reqd": 1
   },
   {
+   "fetch_from": "pr_mg_id.project_name",
    "fieldname": "pr_mg_name",
-   "fieldtype": "Data",
-   "label": "Proyecto"
+   "fieldtype": "Read Only",
+   "label": "Proyecto",
+   "read_only": 1
   },
   {
    "description": "Definir lo mas claramente posible el alcance que tiene el proyecto.  Se deben incluir la mayor cantidad de posible de informaci\u00f3n referente al mercado, tecnolog\u00eda, riesgos, ubicacion, obras a realizar, necesidades de recursos humanos, etc.",
@@ -164,7 +166,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-11-17 11:53:05.156153",
+ "modified": "2022-11-17 15:56:43.080604",
  "modified_by": "Administrator",
  "module": "Project Management",
  "name": "Project Logbook",

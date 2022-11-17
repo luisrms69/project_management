@@ -10,6 +10,7 @@
  "field_order": [
   "af_lider_de_proyecto",
   "column_break_2",
+  "lider",
   "af_project_name",
   "af_resumen_ejecutivo_section",
   "af_resumen_ejecutivo",
@@ -79,7 +80,7 @@
   {
    "fieldname": "af_lider_de_proyecto",
    "fieldtype": "Link",
-   "label": "Lider de Proyecto",
+   "label": "Selecciona Lider Proyecto",
    "options": "User"
   },
   {
@@ -156,18 +157,26 @@
   },
   {
    "fieldname": "af_project_name",
-   "fieldtype": "Data",
-   "label": "Proyecto"
+   "fieldtype": "Read Only",
+   "label": "Proyecto",
+   "read_only": 1
   },
   {
    "fieldname": "alcance_de_los_trabajos",
    "fieldtype": "Text",
    "label": "Alcance de las obras (Inversion CAPEX)"
+  },
+  {
+   "fetch_from": "af_lider_de_proyecto.full_name",
+   "fieldname": "lider",
+   "fieldtype": "Read Only",
+   "label": "Lider",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-11-17 10:56:27.874206",
+ "modified": "2022-11-17 16:06:47.925672",
  "modified_by": "Administrator",
  "module": "Project Management",
  "name": "Analisis de Factibilidad",
