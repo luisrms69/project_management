@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-11-16 17:35:34.147968",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "preinversi\u00f3n_section",
+  "alcance_del_proyecto",
+  "autorizaciones_section",
+  "estudios_de_factibilidad_tecnica_economica_section",
+  "estudios_de_factibilidad_t\u00e9cnica_section",
+  "analisis_de_mercado_hallazgos",
+  "analisis_de_mercado",
+  "an\u00e1lisis_de_tecnologias_hallazgos",
+  "an\u00e1lisis_t\u00e9cnico",
+  "an\u00e1lisis_de_riesgo",
+  "an\u00e1lisis_ambiental",
+  "resultados_financieros_section",
+  "an\u00e1lisis_financiero",
+  "proyecto"
+ ],
+ "fields": [
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "description": "Se tiene que definir lo mas claramente posible el alcance que tiene el proyecto.  Se deben incluir la mayor cantidad de posible de informaci\u00f3n referente al mercado, tecnolog\u00eda, riesgos, etc.",
+   "fieldname": "alcance_del_proyecto",
+   "fieldtype": "Text",
+   "label": "Alcance del proyecto"
+  },
+  {
+   "fieldname": "analisis_de_mercado",
+   "fieldtype": "Attach",
+   "label": "Analisis de Mercado"
+  },
+  {
+   "fieldname": "an\u00e1lisis_t\u00e9cnico",
+   "fieldtype": "Attach",
+   "label": "An\u00e1lisis T\u00e9cnico"
+  },
+  {
+   "fieldname": "an\u00e1lisis_de_riesgo",
+   "fieldtype": "Text",
+   "label": "An\u00e1lisis de Riesgo"
+  },
+  {
+   "fieldname": "an\u00e1lisis_financiero",
+   "fieldtype": "Table",
+   "label": "An\u00e1lisis Financiero",
+   "options": "Project Financial Analysis"
+  },
+  {
+   "fieldname": "an\u00e1lisis_ambiental",
+   "fieldtype": "Text",
+   "label": "An\u00e1lisis Ambiental"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "preinversi\u00f3n_section",
+   "fieldtype": "Section Break",
+   "label": "Preinversi\u00f3n"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "estudios_de_factibilidad_t\u00e9cnica_section",
+   "fieldtype": "Section Break",
+   "label": "Factibilidad T\u00e9cnica"
+  },
+  {
+   "fieldname": "analisis_de_mercado_hallazgos",
+   "fieldtype": "Text",
+   "label": "Analisis de Mercado Hallazgos"
+  },
+  {
+   "fieldname": "an\u00e1lisis_de_tecnologias_hallazgos",
+   "fieldtype": "Text",
+   "label": "An\u00e1lisis de tecnologias hallazgos"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "resultados_financieros_section",
+   "fieldtype": "Section Break",
+   "label": "Factibilidad Econ\u00f3mica"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "estudios_de_factibilidad_tecnica_economica_section",
+   "fieldtype": "Section Break",
+   "label": "Estudios de factibilidad Tecnica Economica"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "autorizaciones_section",
+   "fieldtype": "Section Break",
+   "label": "Autorizaciones"
+  },
+  {
+   "fieldname": "proyecto",
+   "fieldtype": "Data",
+   "label": "Proyecto",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-11-17 08:47:30.161907",
+ "modified_by": "Administrator",
+ "module": "Project Management",
+ "name": "Project Logbook",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
