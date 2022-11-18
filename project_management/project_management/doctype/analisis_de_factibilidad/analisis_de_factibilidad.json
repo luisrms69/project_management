@@ -1,17 +1,19 @@
 {
  "actions": [],
- "allow_rename": 1,
- "autoname": "format:PM-FS-{###}",
+ "autoname": "format:{selecciona_proyecto}-PM-FS-{###}",
  "creation": "2022-11-17 10:05:27.347683",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "af_lider_de_proyecto",
+  "datos_generales_del_proyecto_section",
+  "af_patrocinador_de_proyecto",
+  "selecciona_proyecto",
   "column_break_2",
-  "lider",
+  "af_patrocinador",
   "af_project_name",
+  "fecha_de_presentacion",
   "af_resumen_ejecutivo_section",
   "af_resumen_ejecutivo",
   "descripcion_producto_o_servicio_section",
@@ -76,12 +78,6 @@
    "fieldname": "analisis_datos_financieros",
    "fieldtype": "Text",
    "label": "Conclusiones financieras"
-  },
-  {
-   "fieldname": "af_lider_de_proyecto",
-   "fieldtype": "Link",
-   "label": "Selecciona Lider Proyecto",
-   "options": "User"
   },
   {
    "collapsible": 1,
@@ -156,6 +152,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "selecciona_proyecto.project_name",
    "fieldname": "af_project_name",
    "fieldtype": "Read Only",
    "label": "Proyecto",
@@ -167,16 +164,42 @@
    "label": "Alcance de las obras (Inversion CAPEX)"
   },
   {
-   "fetch_from": "af_lider_de_proyecto.full_name",
-   "fieldname": "lider",
+   "fieldname": "selecciona_proyecto",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Selecciona Proyecto",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fecha_de_presentacion",
+   "fieldtype": "Date",
+   "label": "Fecha de Presentacion"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "datos_generales_del_proyecto_section",
+   "fieldtype": "Section Break",
+   "label": "Datos Generales del Proyecto"
+  },
+  {
+   "fetch_from": "selecciona_patrocinador_del_proyecto.full_name",
+   "fieldname": "af_patrocinador_de_proyecto",
+   "fieldtype": "Link",
+   "label": "Selecciona Patrocinador Proyecto",
+   "options": "User"
+  },
+  {
+   "fetch_from": "af_patrocinador_de_proyecto.full_name",
+   "fieldname": "af_patrocinador",
    "fieldtype": "Read Only",
-   "label": "Lider",
+   "label": "Patrocinador",
    "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-11-17 16:06:47.925672",
+ "modified": "2022-11-17 21:26:09.423232",
  "modified_by": "Administrator",
  "module": "Project Management",
  "name": "Analisis de Factibilidad",

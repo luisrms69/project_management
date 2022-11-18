@@ -9,9 +9,15 @@
  "engine": "InnoDB",
  "field_order": [
   "pr_mg_id",
-  "analisis_de_factibilidad",
   "column_break_3",
   "pr_mg_name",
+  "section_break_4",
+  "selecciona_lider_de_proyecto",
+  "column_break_5",
+  "lider_de_proyecto",
+  "section_break_5",
+  "feasibility_studies",
+  "analisis_de_factibilidad",
   "preinversi\u00f3n_section",
   "pr_mg_alcance_del_proyecto",
   "estudios_de_factibilidad_t\u00e9cnica_section",
@@ -58,7 +64,7 @@
    "fieldname": "pr_mg_id",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Project",
+   "label": "Selecciona Proyecto",
    "options": "Project",
    "reqd": 1
   },
@@ -162,11 +168,42 @@
    "fieldname": "contactos_realizados_durante_el_proceso_section",
    "fieldtype": "Section Break",
    "label": "Contactos realizados durante el proceso"
+  },
+  {
+   "fieldname": "feasibility_studies",
+   "fieldtype": "Table",
+   "label": "Feasibility Studies",
+   "options": "Feasibility Analysis"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "selecciona_lider_de_proyecto.full_name",
+   "fieldname": "lider_de_proyecto",
+   "fieldtype": "Read Only",
+   "label": "Lider de Proyecto",
+   "read_only": 1
+  },
+  {
+   "fieldname": "selecciona_lider_de_proyecto",
+   "fieldtype": "Link",
+   "label": "Selecciona Lider de Proyecto",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-11-17 15:56:43.080604",
+ "modified": "2022-11-17 20:57:03.493776",
  "modified_by": "Administrator",
  "module": "Project Management",
  "name": "Project Logbook",
