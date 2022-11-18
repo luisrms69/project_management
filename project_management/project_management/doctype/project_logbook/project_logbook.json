@@ -1,7 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
- "autoname": "format:PM-{pr_mg_id}-{###}",
+ "autoname": "format:{pr_mg_id}-PM-{###}",
  "creation": "2022-11-16 17:35:34.147968",
  "default_view": "List",
  "doctype": "DocType",
@@ -203,7 +202,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-11-17 20:57:03.493776",
+ "modified": "2022-11-17 21:58:55.545289",
  "modified_by": "Administrator",
  "module": "Project Management",
  "name": "Project Logbook",
