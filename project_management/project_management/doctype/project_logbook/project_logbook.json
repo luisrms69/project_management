@@ -15,7 +15,6 @@
   "column_break_5",
   "lider_de_proyecto",
   "section_break_5",
-  "feasibility_studies",
   "analisis_de_factibilidad",
   "preinversi\u00f3n_section",
   "pr_mg_alcance_del_proyecto",
@@ -169,12 +168,6 @@
    "label": "Contactos realizados durante el proceso"
   },
   {
-   "fieldname": "feasibility_studies",
-   "fieldtype": "Table",
-   "label": "Feasibility Studies",
-   "options": "Feasibility Analysis"
-  },
-  {
    "fieldname": "section_break_5",
    "fieldtype": "Section Break"
   },
@@ -202,7 +195,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-11-17 21:58:55.545289",
+ "modified": "2022-11-18 14:26:34.970768",
  "modified_by": "Administrator",
  "module": "Project Management",
  "name": "Project Logbook",
