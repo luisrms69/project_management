@@ -185,3 +185,7 @@ app_license = "MIT"
 # auth_hooks = [
 #	"project_management.auth.validate"
 # ]
+
+fixtures = [
+       "Custom Field"
+]
