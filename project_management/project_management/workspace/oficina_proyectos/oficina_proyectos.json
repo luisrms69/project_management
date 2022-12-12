@@ -193,7 +193,7 @@
    "type": "Link"
   }
  ],
- "modified": "2022-11-17 13:45:05.604931",
+ "modified": "2022-12-05 12:40:27.169522",
  "modified_by": "Administrator",
  "module": "Project Management",
  "name": "Oficina Proyectos",
@@ -203,7 +203,7 @@
  "quick_lists": [],
  "restrict_to_domain": "",
  "roles": [],
- "sequence_id": 20.1,
+ "sequence_id": 25.0,
  "shortcuts": [
   {
    "color": "Blue",
